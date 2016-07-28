@@ -5,7 +5,7 @@
 	<meta name="keywords" content="<?php echo ($seo_keywords); ?>" />
 	<meta name="description" content="<?php echo ($seo_description); ?>">
     	<?php  function _sp_helloworld(){ echo "hello ThinkCMF!"; } function _sp_helloworld2(){ echo "hello ThinkCMF2!"; } function _sp_helloworld3(){ echo "hello ThinkCMF3!"; } ?>
-	<?php $portal_index_lastnews="2"; $portal_hot_articles="1,2"; $portal_last_post="1,2"; $tmpl=sp_get_theme_path(); $default_home_slides=array( array( "slide_name"=>"ThinkCMFX2.1.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/1.jpg", "slide_url"=>"", ), array( "slide_name"=>"ThinkCMFX2.1.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/2.jpg", "slide_url"=>"", ), array( "slide_name"=>"ThinkCMFX2.1.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/3.jpg", "slide_url"=>"", ), ); ?>
+	<?php $portal_index_lastnews="3"; $portal_hot_articles="4,5"; $portal_last_post="4,5"; $tmpl=sp_get_theme_path(); $default_home_slides=array( array( "slide_name"=>"ThinkCMFX2.1.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/1.jpg", "slide_url"=>"", ), array( "slide_name"=>"ThinkCMFX2.1.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/2.jpg", "slide_url"=>"", ), array( "slide_name"=>"ThinkCMFX2.1.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/3.jpg", "slide_url"=>"", ), ); ?>
 	<meta name="author" content="ThinkCMF">
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -103,9 +103,16 @@
 				
 				<div class="list-boxes">
 					<h2><a href="<?php echo leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']));?>"><?php echo ($vo["post_title"]); ?></a></h2>
-					<p><?php echo (msubstr($vo["post_excerpt"],0,256)); ?></p>
+					<div style="float: left; padding-right: 10px;">
+						<a href="<?php echo leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']));?>">
+						<?php if(empty($smeta['thumb'])): ?><img src="/themes/simplebootx/Public/images/default_tupian1.png" class="img-responsive" alt="<?php echo ($vo["post_title"]); ?>" width="120">
+							<?php else: ?>
+							<img src="<?php echo sp_get_asset_upload_path($smeta['thumb']);?>" class="img-responsive" alt="<?php echo ($vo["post_title"]); ?>" width="120"><?php endif; ?>
+						</a>
+					</div>
+					<p><?php echo (msubstr($vo["post_excerpt"],0,200)); ?></p>
 					<div>
-						<div class="pull-left">
+						<div class="pull-right">
 							<div class="list-actions">
 							<a href="javascript:;"><i class="fa fa-eye"></i><span><?php echo ($vo["post_hits"]); ?></span></a>
 							<a href="<?php echo U('article/do_like',array('id'=>$vo['object_id']));?>" class="js-count-btn"><i class="fa fa-thumbs-up"></i><span class="count"><?php echo ($vo["post_like"]); ?></span></a>
@@ -114,7 +121,7 @@
 							</a>
 							</div>
 						</div>
-						<a class="btn btn-warning pull-right" href="<?php echo leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']));?>">查看更多</a>
+						<!--<a class="btn btn-warning pull-right" href="<?php echo leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']));?>">查看更多</a>-->
 					</div>
 				</div><?php endforeach; endif; else: echo "" ;endif; ?>
 				
@@ -127,9 +134,9 @@
           		<h2>分享</h2>
           	</div>
 			<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tqf" data-cmd="tqf" title="分享到腾讯朋友"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a></div>
-			<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion='+~(-new Date()/36e5)];</script>          
+			<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion='+~(-new Date()/36e5)];</script>
         	</div>
-        	
+
         	<div class="tc-box">
 	        	<div class="headtitle">
 	        		<h2>热门文章</h2>
@@ -157,7 +164,7 @@
 	                    </div><?php endforeach; endif; ?>
                 </div>
 			</div>
-			
+
 			<div class="tc-box">
 	        	<div class="headtitle">
 	        		<h2>最新加入</h2>
@@ -171,7 +178,7 @@
                     </li><?php endforeach; endif; ?>
                 </ul>
 			</div>
-			
+
 			<div class="tc-box">
 	        	<div class="headtitle">
 	        		<h2>最新发布</h2>
@@ -183,7 +190,7 @@
 				            <dt>
 					            <a class="img-wraper" href="<?php echo leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']));?>">
 					            	<?php if(empty($smeta['thumb'])): ?><img src="/themes/simplebootx/Public/images/default_tupian4.png" class="img-responsive" alt="<?php echo ($vo["post_title"]); ?>"/>
-									<?php else: ?> 
+									<?php else: ?>
 										<img src="<?php echo sp_get_asset_upload_path($smeta['thumb']);?>" class="img-responsive img-thumbnail" alt="<?php echo ($vo["post_title"]); ?>" /><?php endif; ?>
 					            </a>
 				            </dt>
@@ -191,7 +198,7 @@
 				        </dl><?php endforeach; endif; ?>
 		        </div>
 			</div>
-			
+
 			<?php $ad=sp_getad("portal_list_right_aside"); ?>
 			<?php if(!empty($ad)): ?><div class="tc-box">
 	        	<div class="headtitle">
@@ -203,28 +210,22 @@
 			</div><?php endif; ?>
 		</div>
     </div>
-    
-    
+
+
     <br>
-<br>
-<br>
 <!-- Footer ================================================== -->
 <hr>
 <?php echo hook('footer');?>
 <div id="footer">
-	<div class="links">
+	<div class="links" style="padding-bottom: 10px;">
 		<?php $links=sp_getlinks(); ?>
-		<?php if(is_array($links)): foreach($links as $key=>$vo): ?><a href="<?php echo ($vo["link_url"]); ?>" target="<?php echo ($vo["link_target"]); ?>"><?php echo ($vo["link_name"]); ?></a><?php endforeach; endif; ?>
+		<?php if(is_array($links)): foreach($links as $key=>$vo): ?><span  style="padding: 10px;">
+				<img src="/themes/simplebootx/Public/images/headicon.png" class="img-responsive" alt="<?php echo ($vo["post_title"]); ?>">
+				<a href="<?php echo ($vo["link_url"]); ?>" target="<?php echo ($vo["link_target"]); ?>"><?php echo ($vo["link_name"]); ?></a>
+			</span><?php endforeach; endif; ?>
 	</div>
 	<p>
-		Made by <a href="http://www.thinkcmf.com" target="_blank">ThinkCMF</a>
-		Code licensed under the 
-		<a href="http://www.apache.org/licenses/LICENSE-2.0" rel="nofollow" target="_blank">Apache License v2.0</a>.
-		<br />
-		Based on 
-		<a href="http://getbootstrap.com/2.3.2/" target="_blank">Bootstrap</a>.
-		Icons from 
-		<a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">Font Awesome</a>
+		Copyright ©2016 <a href="#" target="_blank">老中医</a>
 	</p>
 </div>
 <div id="backtotop">

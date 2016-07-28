@@ -5,7 +5,7 @@
 		<meta name="keywords" content="<?php echo ($post_keywords); ?>" />
 		<meta name="description" content="<?php echo ($post_excerpt); ?>">
 			<?php  function _sp_helloworld(){ echo "hello ThinkCMF!"; } function _sp_helloworld2(){ echo "hello ThinkCMF2!"; } function _sp_helloworld3(){ echo "hello ThinkCMF3!"; } ?>
-	<?php $portal_index_lastnews="2"; $portal_hot_articles="1,2"; $portal_last_post="1,2"; $tmpl=sp_get_theme_path(); $default_home_slides=array( array( "slide_name"=>"ThinkCMFX2.1.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/1.jpg", "slide_url"=>"", ), array( "slide_name"=>"ThinkCMFX2.1.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/2.jpg", "slide_url"=>"", ), array( "slide_name"=>"ThinkCMFX2.1.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/3.jpg", "slide_url"=>"", ), ); ?>
+	<?php $portal_index_lastnews="3"; $portal_hot_articles="4,5"; $portal_last_post="4,5"; $tmpl=sp_get_theme_path(); $default_home_slides=array( array( "slide_name"=>"ThinkCMFX2.1.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/1.jpg", "slide_url"=>"", ), array( "slide_name"=>"ThinkCMFX2.1.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/2.jpg", "slide_url"=>"", ), array( "slide_name"=>"ThinkCMFX2.1.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/3.jpg", "slide_url"=>"", ), ); ?>
 	<meta name="author" content="ThinkCMF">
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -146,7 +146,7 @@
 		        	<?php echo ($ad); ?>
 		        </div>
 			</div><?php endif; ?>
-		    
+			<?php echo Comments("posts",$object_id);?>
 		</div>
 		<div class="span3">
 			<div class="tc-box first-box">
@@ -203,27 +203,21 @@
 		</div>
 		
 	</div>
-              
-<br>
-<br>
+
 <br>
 <!-- Footer ================================================== -->
 <hr>
 <?php echo hook('footer');?>
 <div id="footer">
-	<div class="links">
+	<div class="links" style="padding-bottom: 10px;">
 		<?php $links=sp_getlinks(); ?>
-		<?php if(is_array($links)): foreach($links as $key=>$vo): ?><a href="<?php echo ($vo["link_url"]); ?>" target="<?php echo ($vo["link_target"]); ?>"><?php echo ($vo["link_name"]); ?></a><?php endforeach; endif; ?>
+		<?php if(is_array($links)): foreach($links as $key=>$vo): ?><span  style="padding: 10px;">
+				<img src="/themes/simplebootx/Public/images/headicon.png" class="img-responsive" alt="<?php echo ($vo["post_title"]); ?>">
+				<a href="<?php echo ($vo["link_url"]); ?>" target="<?php echo ($vo["link_target"]); ?>"><?php echo ($vo["link_name"]); ?></a>
+			</span><?php endforeach; endif; ?>
 	</div>
 	<p>
-		Made by <a href="http://www.thinkcmf.com" target="_blank">ThinkCMF</a>
-		Code licensed under the 
-		<a href="http://www.apache.org/licenses/LICENSE-2.0" rel="nofollow" target="_blank">Apache License v2.0</a>.
-		<br />
-		Based on 
-		<a href="http://getbootstrap.com/2.3.2/" target="_blank">Bootstrap</a>.
-		Icons from 
-		<a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">Font Awesome</a>
+		Copyright ©2016 <a href="#" target="_blank">老中医</a>
 	</p>
 </div>
 <div id="backtotop">

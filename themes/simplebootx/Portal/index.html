@@ -42,84 +42,183 @@ $home_slides=sp_getslide("portal_index");
 
 $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 </php>
-<ul id="homeslider" class="unstyled">
-	<foreach name="home_slides" item="vo">
-	<li>
-		<div class="caption-wraper">
-			<div class="caption">{$vo.slide_name}</div>
-		</div>
-		<a href="{$vo.slide_url}"><img src="{:sp_get_asset_upload_path($vo['slide_pic'])}" alt=""></a>
-	</li>
-	</foreach>
-</ul>
 <div class="container">
-	
-	<div>
-		<h1 class="text-center">快速了解ThinkCMF</h1>
-		<h3 class="text-center">Quickly understand the ThinkCMF</h3>
-	</div>
 	<div class="row">
-		<div class="span4">
-			 <h2 class="font-large nospace"><i class="fa fa-bars"></i> MVC分层模式</h2>
-             <p>使用MVC应用程序被分成三个核心部件：模型（M）、视图（V）、控制器（C），他不是一个新的概念，只是ThinkCMF将其发挥到了极致。</p>
-		</div>
-		<div class="span4">
-			 <h2 class="font-large nospace"><i class="fa fa-group"></i> 用户管理</h2>
-             <p>ThinkCMF内置了灵活的用户管理方式，并可直接与第三方站点进行互联互通，如果你愿意甚至可以对单个用户或群体用户的行为进行记录及分享，为您的运营决策提供有效参考数据。</p>
-		</div>
-		<div class="span4">
-			  <h2 class="font-large nospace"><i class="fa fa-cloud"></i> 云端部署</h2>
-              <p>通过驱动的方式可以轻松支持云平台的部署，让你的网站无缝迁移，内置已经支持SAE、BAE，正式版将对云端部署进行进一步优化。</p>
-		</div>
-	</div>
-	
-	<div class="row">
-		<div class="span4">
-			 <h2 class="font-large nospace"><i class="fa fa-heart"></i> 安全策略</h2>
-             <p>提供的稳健的安全策略，包括备份恢复，容错，防治恶意攻击登陆，网页防篡改等多项安全管理功能，保证系统安全，可靠，稳定的运行。</p>
-		</div>
-		<div class="span4">
-			 <h2 class="font-large nospace"><i class="fa fa-cubes"></i> 应用模块化</h2>
-             <p>提出全新的应用模式进行扩展，不管是你开发一个小功能还是一个全新的站点，在ThinkCMF中你只是增加了一个APP，每个独立运行互不影响，便于灵活扩展和二次开发。</p>
-		</div>
-		<div class="span4">
-			  <h2 class="font-large nospace"><i class="fa fa-certificate"></i> 免费开源</h2>
-              <p>代码遵循Apache2开源协议，免费使用，对商业用户也无任何限制。</p>
-		</div>
-	</div>
-	
-	<div>
-		<h1 class="text-center">最新资讯</h1>
-		<h3 class="text-center">Last News</h3>
-	</div>
-	<php>
-		$lastnews=sp_sql_posts("cid:$portal_index_lastnews;field:post_title,post_excerpt,tid,smeta;order:listorder asc;limit:4;"); 
-	</php>
-	<div class="row">
-		<foreach name="lastnews" item="vo">
-		<php>$smeta=json_decode($vo['smeta'],true);</php>
-		<div class="span3">
-			<div class="tc-gridbox">
-				<div class="header">
-					<div class="item-image">
-						<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
-							<if condition="empty($smeta['thumb'])"> 
-								<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
-							<else /> 
-								<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
-							</if>
-						</a>
+		<div class="span7">
+			<h3>我的资源分享——分享从这里开始</h3>
+			<ul id="homeslider" class="unstyled">
+				<foreach name="home_slides" item="vo">
+				<li>
+					<div class="caption-wraper">
+						<div class="caption">{$vo.slide_name}</div>
 					</div>
-					<h3><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title}</a></h3>
-					<hr>
-				</div>
-				<div class="body">
-					<p><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{:msubstr($vo['post_excerpt'],0,32)}</a></p>
+					<a href="{$vo.slide_url}"><img src="{:sp_get_asset_upload_path($vo['slide_pic'])}" alt=""></a>
+				</li>
+				</foreach>
+			</ul>
+		</div>
+		<div class="span5">
+			<h3 class="section-title">一周热门排行</h3>
+			<div class="widget">
+				<div id="accordion2" class="accordion">
+					<php>
+						$saying=sp_sql_posts("cid:$portal_hot_articles;field:post_title,post_excerpt,tid,term_id,smeta;order:post_hits desc;limit:7;");
+					</php>
+					<foreach name="saying" item="vo">
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a href="#accordion_child{$key}" data-toggle="collapse" class="accordion-toggle collapsed">{$vo.post_title}</a></div>
+							<div class="accordion-body collapse" id="accordion_child{$key}">
+								<div class="accordion-inner">
+									<p style="text-indent: 2em;">{$vo.post_excerpt}</p>
+								</div>
+							</div>
+						</div>
+					</foreach>
 				</div>
 			</div>
 		</div>
-		</foreach>
 	</div>
+
+<div class="container">
+	<div class="row">
+		<h2 class="font-large nospace" style="margin-left: 30px;">热门推荐</h2>
+		<div class="span3">
+			<img src="http://7xqnt6.com1.z0.glb.clouddn.com/bb1.jpg" class="img-responsive" alt="{$vo.post_title}" style="padding-bottom: 10px;">
+			<span style="font-size: 16px;"><a href="#">定制版+适配了用户中心与商城论内容所在的表，不带表前缀的</a></span>
+		</div>
+		<div class="span3">
+			<img src="http://7xqnt6.com1.z0.glb.clouddn.com/bb1.jpg" class="img-responsive" alt="{$vo.post_title}" style="padding-bottom: 10px;">
+			<p style="font-size: 16px;"><a href="#">定制版+适配了用户中心与商城论内容所在的表，不带表前缀的</a></p>
+		</div>
+		<div class="span3">
+			<img src="http://7xqnt6.com1.z0.glb.clouddn.com/bb1.jpg" class="img-responsive" alt="{$vo.post_title}" style="padding-bottom: 10px;">
+			<p style="font-size: 16px;"><a href="#">定制版+适配了用户中心与商城论内容所在的表，不带表前缀的</a></p>
+		</div>
+		<div class="span3">
+			<img src="http://7xqnt6.com1.z0.glb.clouddn.com/bb1.jpg" class="img-responsive" alt="{$vo.post_title}" style="padding-bottom: 10px;">
+			<p style="font-size: 16px;"><a href="#">定制版+适配了用户中心与商城论内容所在的表，不带表前缀的</a></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span4 list">
+			<h2 class="font-large nospace">前端技术</h2>
+			<div style="padding-bottom: 10px; list-style-type: none;">
+				<div style="float: left; padding-right: 10px;">
+					<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
+						<if condition="empty($smeta['thumb'])">
+							<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" width="120">
+							<else />
+							<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" width="120">
+						</if>
+					</a>
+				</div>
+				<span>
+					<span style="font-weight: bold; font-size: 16px;"><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title}</a></span>
+					<p style="font-size: 12px; padding-top: 10px;">{$vo.post_excerpt|msubstr=0,40}</p>
+				</span>
+			</div>
+			<ul>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+			</ul>
+		</div>
+		<div class="span4 list">
+			<h2 class="font-large nospace">编程开发</h2>
+			<div style="padding-bottom: 10px; list-style-type: none;">
+				<div style="float: left; padding-right: 10px;">
+					<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
+						<if condition="empty($smeta['thumb'])">
+							<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" width="120">
+							<else />
+							<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" width="120">
+						</if>
+					</a>
+				</div>
+				<span>
+					<span style="font-weight: bold; font-size: 16px;"><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title}</a></span>
+					<p style="font-size: 12px; padding-top: 10px;">{$vo.post_excerpt|msubstr=0,40}</p>
+				</span>
+			</div>
+			<ul>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+			</ul>
+		</div>
+		<div class="span4 list">
+			<h2 class="font-large nospace">程序员人生</h2>
+			<div style="padding-bottom: 10px; list-style-type: none;">
+				<div style="float: left; padding-right: 10px;">
+					<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
+						<if condition="empty($smeta['thumb'])">
+							<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" width="120">
+							<else />
+							<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" width="120">
+						</if>
+					</a>
+				</div>
+				<span>
+					<span style="font-weight: bold; font-size: 16px;"><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title}</a></span>
+					<p style="font-size: 12px; padding-top: 10px;">{$vo.post_excerpt|msubstr=0,40}</p>
+				</span>
+			</div>
+			<ul>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<h2 class="font-large nospace" style="margin-left: 30px;">PHP/WEB-常用开发工具</h2>
+		<div class="span3 list">
+			<ul>
+				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
+				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
+				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
+			</ul>
+		</div>
+		<div class="span3 list">
+			<ul>
+				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
+				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
+				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
+			</ul>
+		</div>
+		<div class="span3 list">
+			<ul>
+				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
+				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
+				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
+			</ul>
+		</div>
+		<div class="span3 list">
+			<ul>
+				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
+				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
+				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<h2 class="font-large nospace" style="margin-left: 30px;">前端实例</h2>
+		<div class="span3"><img src="http://7xqnt6.com1.z0.glb.clouddn.com/bb1.jpg" class="img-responsive" alt="{$vo.post_title}"></div>
+		<div class="span3"><img src="http://7xqnt6.com1.z0.glb.clouddn.com/2.jpg" class="img-responsive" alt="{$vo.post_title}"></div>
+		<div class="span3"><img src="http://7xqnt6.com1.z0.glb.clouddn.com/3.jpg" class="img-responsive" alt="{$vo.post_title}"></div>
+		<div class="span3"><img src="http://7xqnt6.com1.z0.glb.clouddn.com/6.jpg" class="img-responsive" alt="{$vo.post_title}"></div>
+	</div>
+
 <tc_include file="Public:footer"/>
 </div>
 

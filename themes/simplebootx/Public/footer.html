@@ -1,25 +1,19 @@
 <br>
-<br>
-<br>
 <!-- Footer ================================================== -->
 <hr>
 {:hook('footer')}
 <div id="footer">
-	<div class="links">
+	<div class="links" style="padding-bottom: 10px;">
 		<php>$links=sp_getlinks();</php>
 		<foreach name="links" item="vo">
-			<a href="{$vo.link_url}" target="{$vo.link_target}">{$vo.link_name}</a>
+			<span  style="padding: 10px;">
+				<img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}">
+				<a href="{$vo.link_url}" target="{$vo.link_target}">{$vo.link_name}</a>
+			</span>
 		</foreach>
 	</div>
 	<p>
-		Made by <a href="http://www.thinkcmf.com" target="_blank">ThinkCMF</a>
-		Code licensed under the 
-		<a href="http://www.apache.org/licenses/LICENSE-2.0" rel="nofollow" target="_blank">Apache License v2.0</a>.
-		<br />
-		Based on 
-		<a href="http://getbootstrap.com/2.3.2/" target="_blank">Bootstrap</a>.
-		Icons from 
-		<a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">Font Awesome</a>
+		Copyright ©2016 <a href="#" target="_blank">老中医</a>
 	</p>
 </div>
 <div id="backtotop">
