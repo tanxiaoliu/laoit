@@ -62,9 +62,9 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 			<div class="widget">
 				<div id="accordion2" class="accordion">
 					<php>
-						$saying=sp_sql_posts("cid:$portal_hot_articles;field:post_title,post_excerpt,tid,term_id,smeta;order:post_hits desc;limit:7;");
+						$hot_articles=sp_sql_posts("cid:$portal_hot_articles;field:post_title,post_excerpt,tid,term_id,smeta;order:post_hits desc;limit:7;");
 					</php>
-					<foreach name="saying" item="vo">
+					<foreach name="hot_articles" item="vo">
 						<div class="accordion-group">
 							<div class="accordion-heading">
 								<a href="#accordion_child{$key}" data-toggle="collapse" class="accordion-toggle collapsed">{$vo.post_title}</a></div>
@@ -83,136 +83,139 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 <div class="container">
 	<div class="row">
 		<h2 class="font-large nospace" style="margin-left: 30px;">热门推荐</h2>
+		<php>
+			$hot_recommend=sp_sql_posts("cid:$portal_hot_recommend;field:post_title,post_excerpt,tid,term_id,smeta;order:post_hits desc;limit:4;");
+		</php>
+		<foreach name="hot_recommend" item="vo">
+		<php>$smeta=json_decode($vo['smeta'],true);</php>
 		<div class="span3">
-			<img src="http://7xqnt6.com1.z0.glb.clouddn.com/bb1.jpg" class="img-responsive" alt="{$vo.post_title}" style="padding-bottom: 10px;">
-			<span style="font-size: 16px;"><a href="#">定制版+适配了用户中心与商城论内容所在的表，不带表前缀的</a></span>
+			<if condition="empty($smeta['thumb'])">
+				<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" style="padding-bottom: 10px; height: 162px; width: 270px;">
+				<else />
+				<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" style="padding-bottom: 10px; height: 162px; width: 270px;">
+			</if>
+				<span style="font-size: 16px;"><a href="#">{$vo.post_title}</a></span>
 		</div>
-		<div class="span3">
-			<img src="http://7xqnt6.com1.z0.glb.clouddn.com/bb1.jpg" class="img-responsive" alt="{$vo.post_title}" style="padding-bottom: 10px;">
-			<p style="font-size: 16px;"><a href="#">定制版+适配了用户中心与商城论内容所在的表，不带表前缀的</a></p>
-		</div>
-		<div class="span3">
-			<img src="http://7xqnt6.com1.z0.glb.clouddn.com/bb1.jpg" class="img-responsive" alt="{$vo.post_title}" style="padding-bottom: 10px;">
-			<p style="font-size: 16px;"><a href="#">定制版+适配了用户中心与商城论内容所在的表，不带表前缀的</a></p>
-		</div>
-		<div class="span3">
-			<img src="http://7xqnt6.com1.z0.glb.clouddn.com/bb1.jpg" class="img-responsive" alt="{$vo.post_title}" style="padding-bottom: 10px;">
-			<p style="font-size: 16px;"><a href="#">定制版+适配了用户中心与商城论内容所在的表，不带表前缀的</a></p>
-		</div>
+		</foreach>
 	</div>
 	<div class="row">
 		<div class="span4 list">
 			<h2 class="font-large nospace">前端技术</h2>
-			<div style="padding-bottom: 10px; list-style-type: none;">
-				<div style="float: left; padding-right: 10px;">
-					<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
-						<if condition="empty($smeta['thumb'])">
-							<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" width="120">
-							<else />
-							<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" width="120">
-						</if>
-					</a>
-				</div>
-				<span>
-					<span style="font-weight: bold; font-size: 16px;"><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title}</a></span>
-					<p style="font-size: 12px; padding-top: 10px;">{$vo.post_excerpt|msubstr=0,40}</p>
-				</span>
-			</div>
 			<ul>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<php>
+					$front_design=sp_sql_posts("cid:$portal_front_design;field:post_title,post_excerpt,tid,term_id,smeta;order:post_hits desc;limit:8;");
+				</php>
+				<foreach name="front_design" item="vo">
+					<php>$smeta=json_decode($vo['smeta'],true);</php>
+					<if condition="$key eq 0">
+						<li>
+							<div style="padding-bottom: 10px; list-style-type: none;">
+								<div style="float: left; padding-right: 10px;">
+									<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
+										<if condition="empty($smeta['thumb'])">
+											<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
+											<else />
+											<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
+										</if>
+									</a>
+								</div>
+								<span>
+									<span style="font-weight: bold; font-size: 16px;"><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title|msubstr=0,20}</a></span>
+									<p style="font-size: 12px; padding-top: 10px;">{$vo.post_excerpt|msubstr=0,35}</p>
+								</span>
+							</div>
+						</li>
+					<else />
+						<li><a href="#">{$vo.post_title|msubstr=0,40}</a></li>
+					</if>
+				</foreach>
 			</ul>
 		</div>
 		<div class="span4 list">
 			<h2 class="font-large nospace">编程开发</h2>
-			<div style="padding-bottom: 10px; list-style-type: none;">
-				<div style="float: left; padding-right: 10px;">
-					<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
-						<if condition="empty($smeta['thumb'])">
-							<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" width="120">
-							<else />
-							<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" width="120">
-						</if>
-					</a>
-				</div>
-				<span>
-					<span style="font-weight: bold; font-size: 16px;"><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title}</a></span>
-					<p style="font-size: 12px; padding-top: 10px;">{$vo.post_excerpt|msubstr=0,40}</p>
-				</span>
-			</div>
 			<ul>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<php>
+					$portal_program=sp_sql_posts("cid:$portal_program;field:post_title,post_excerpt,tid,term_id,smeta;order:post_hits desc;limit:8;");
+				</php>
+				<foreach name="portal_program" item="vo">
+					<php>$smeta=json_decode($vo['smeta'],true);</php>
+					<if condition="$key eq 0">
+						<li>
+							<div style="padding-bottom: 10px; list-style-type: none;">
+								<div style="float: left; padding-right: 10px;">
+									<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
+										<if condition="empty($smeta['thumb'])">
+											<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
+											<else />
+											<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
+										</if>
+									</a>
+								</div>
+								<span>
+									<span style="font-weight: bold; font-size: 16px;"><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title}</a></span>
+									<p style="font-size: 12px; padding-top: 10px;">{$vo.post_excerpt|msubstr=0,35}</p>
+								</span>
+							</div>
+						</li>
+						<else />
+						<li><a href="#">{$vo.post_title|msubstr=0,40}</a></li>
+					</if>
+				</foreach>
 			</ul>
 		</div>
 		<div class="span4 list">
 			<h2 class="font-large nospace">程序员人生</h2>
-			<div style="padding-bottom: 10px; list-style-type: none;">
-				<div style="float: left; padding-right: 10px;">
-					<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
-						<if condition="empty($smeta['thumb'])">
-							<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" width="120">
-							<else />
-							<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" width="120">
-						</if>
-					</a>
-				</div>
-				<span>
-					<span style="font-weight: bold; font-size: 16px;"><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title}</a></span>
-					<p style="font-size: 12px; padding-top: 10px;">{$vo.post_excerpt|msubstr=0,40}</p>
-				</span>
-			</div>
 			<ul>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
-				<li><a href="#">SSH Secure Shell 经典版SSH Secure Shell 经典版</a></li>
+				<php>
+					$programmer_life=sp_sql_posts("cid:$portal_programmer_life;field:post_title,post_excerpt,tid,term_id,smeta;order:post_hits desc;limit:8;");
+				</php>
+				<foreach name="programmer_life" item="vo">
+					<php>$smeta=json_decode($vo['smeta'],true);</php>
+					<if condition="$key eq 0">
+						<li>
+							<div style="padding-bottom: 10px; list-style-type: none;">
+								<div style="float: left; padding-right: 10px;">
+									<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
+										<if condition="empty($smeta['thumb'])">
+											<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
+											<else />
+											<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
+										</if>
+									</a>
+								</div>
+								<span>
+									<span style="font-weight: bold; font-size: 16px;"><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title}</a></span>
+									<p style="font-size: 12px; padding-top: 10px;">{$vo.post_excerpt|msubstr=0,35}</p>
+								</span>
+							</div>
+						</li>
+						<else />
+						<li><a href="#">{$vo.post_title|msubstr=0,40}</a></li>
+					</if>
+				</foreach>
 			</ul>
 		</div>
 	</div>
 	<div class="row">
 		<h2 class="font-large nospace" style="margin-left: 30px;">PHP/WEB-常用开发工具</h2>
-		<div class="span3 list">
+		<div class="span12 list web_tool">
 			<ul>
-				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
-				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
-				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
-			</ul>
-		</div>
-		<div class="span3 list">
-			<ul>
-				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
-				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
-				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
-			</ul>
-		</div>
-		<div class="span3 list">
-			<ul>
-				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
-				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
-				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
-			</ul>
-		</div>
-		<div class="span3 list">
-			<ul>
-				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
-				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
-				<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}"><a href="#">SSH Secure Shell 经典版</a></li>
+				<php>
+					$web_tool=sp_sql_posts("cid:$portal_web_tool;field:post_title,post_excerpt,tid,term_id,smeta;order:post_hits desc;limit:12;");
+				</php>
+				<foreach name="web_tool" item="vo">
+					<php>$smeta=json_decode($vo['smeta'],true);</php>
+					<if condition="empty($smeta['thumb'])">
+						<li><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}" style="height: 35px; width: 35px; padding-right: 5px;"><a href="#">{$vo.post_title|msubstr=0,15}</a></li>
+						<else />
+						<li><img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" style="height: 35px; width: 35px; padding-right: 5px;"><a href="#">{$vo.post_title|msubstr=0,25}</a></li>
+					</if>
+				</foreach>
 			</ul>
 		</div>
 	</div>
 	<div class="row">
-		<h2 class="font-large nospace" style="margin-left: 30px;">前端实例</h2>
+		<h2 class="font-large nospace" style="margin-left: 30px;">经典美图</h2>
 		<div class="span3"><img src="http://7xqnt6.com1.z0.glb.clouddn.com/bb1.jpg" class="img-responsive" alt="{$vo.post_title}"></div>
 		<div class="span3"><img src="http://7xqnt6.com1.z0.glb.clouddn.com/2.jpg" class="img-responsive" alt="{$vo.post_title}"></div>
 		<div class="span3"><img src="http://7xqnt6.com1.z0.glb.clouddn.com/3.jpg" class="img-responsive" alt="{$vo.post_title}"></div>
