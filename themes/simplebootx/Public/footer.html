@@ -1,20 +1,18 @@
-<br>
 <!-- Footer ================================================== -->
 <hr>
 {:hook('footer')}
 <div id="footer">
-	<div class="links" style="padding-bottom: 10px;">
+	<div class="links" style="padding-bottom: 20px;">
 		<php>$links=sp_getlinks();</php>
 		<foreach name="links" item="vo">
 			<span  style="padding: 10px;">
-				<img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}">
+				<!--<img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.link_name}">-->
 				<a href="{$vo.link_url}" target="{$vo.link_target}">{$vo.link_name}</a>
 			</span>
 		</foreach>
 	</div>
-	<p>
-		Copyright ©2016 <a href="#" target="_blank">老中医</a>
-	</p>
+	<p style="text-align: center;">Copyright ©2016 老IT学习网 版权所有</p>
+	<br>
 </div>
 <div id="backtotop">
 	<i class="fa fa-arrow-circle-up"></i>

@@ -46,17 +46,18 @@
 					<a href="{:leuu('article/index',array('id'=>$next['tid'],'cid'=>$next['term_id']))}" class="btn btn-warning pull-right">下一篇</a>
 					</if>
     	            <script type="text/javascript" src="__TMPL__Public/js/qrcode.min.js"></script>
-                    <div id="qrcode" style="width: 100px;margin:0 auto"></div>
+                    <div id="qrcode" style="width: 100px; height: 100px; margin:0 auto"></div>
+                   <!-- <div id="qrcode" style="width: 100px;margin:0 auto"></div>
     					<script type="text/javascript">
                         var qrcode = new QRCode(document.getElementById("qrcode"), {
                         width : 100,
                         height : 100
                         });
-                        function makeCode () {		
+                        function makeCode () {
                         qrcode.makeCode("http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}");
                         }
                         makeCode();
-                        </script>
+                        </script>-->
 					<div class="clearfix"></div>
 				</div>
 		    	
