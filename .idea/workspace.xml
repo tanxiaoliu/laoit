@@ -2,20 +2,127 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcf439be-e8ce-40e5-b60d-2dd4a6ce3c59" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160721/579034d5e82a4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160721/579036b329133.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160721/579036c26364b.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160721/579037c7802fa.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160728/5799a70155e60.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160729/579ab1246b64c.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160729/579ab139d4ac6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160729/579ab178a14dd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160729/579ab1c5255f4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160729/579abf7bef3ac.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160729/579abfa75c9e6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160729/579abfe872861.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160729/579ac01696d01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160729/579ac02376088.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160729/579ac0484dc6b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160729/579ac0688eae1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160729/579af428e1dfb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160729/579af58777326.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160729/579af60df3253.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160729/579af62da8648.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160805/57a47da82376e.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/20160806/57a55b94ab4c8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d54bfdc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d558ee7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d5ddfee.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d5f04eb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d64569c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d6613f2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d71786a.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d8551be.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d87d585.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d888168.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d89f2f0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d8b8c53.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d8e70f5.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d902275.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d911635.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d9283d5.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d95060b.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d9603f7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d97b7ec.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d99b168.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d9ace94.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160728/5799d5d9bc63c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aaffc683c9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aaffcb1ba2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aaffce6b56.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aaffd18697.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aaffde2157.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aaffe3309f.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aaffe61eaa.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aaffe8ce34.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aaffeae564.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aaffed278c.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aafff4a00d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aafff6ea06.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aafffb6687.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aafffdcbd8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab00018b2b.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab000ba929.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab0014a468.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab001972f2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab002d8e02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab0033e957.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab08831cac.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab08848411.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab1be15678.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab1be2bddd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab7da5387e.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab81ce7ec0.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab81cec129.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab81d055c4.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab81d0f5ee.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab81d16350.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab81d1b941.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab81d687cb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab81d700e5.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab81d76e47.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab81d7f319.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab81d86462.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab81d8aab3.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab81d91815.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab86dc0c48.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ab86dc5e51.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aba511124a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579aba9fd9f36.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579abb074389f.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579abb2063a0d.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579abf465b822.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579abfa0216f8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579abfd251be7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ac008a582b.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ac040d9522.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ac05f9ee9a.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/upload/ueditor/20160729/579ac0822b2f1.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/themes/simplebootx/Public/assets/images/favicon.ico" afterPath="$PROJECT_DIR$/admin/themes/simplebootx/Public/assets/images/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/simplebootx/Public/images/favicon.ico" afterPath="$PROJECT_DIR$/themes/simplebootx/Public/images/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/simplebootx/Public/images/logo.png" afterPath="$PROJECT_DIR$/themes/simplebootx/Public/images/logo.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/themes/simplebootx/Admin/Main/index.html" afterPath="$PROJECT_DIR$/admin/themes/simplebootx/Admin/Main/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/themes/simplebootx/Admin/boot/index.html" afterPath="$PROJECT_DIR$/admin/themes/simplebootx/Admin/boot/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/Admin/Controller/MainController.class.php" afterPath="$PROJECT_DIR$/application/Admin/Controller/MainController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/conf/db.php" afterPath="$PROJECT_DIR$/data/conf/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/themes/simplebootx/Admin/login.html" afterPath="$PROJECT_DIR$/admin/themes/simplebootx/Admin/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/themes/simplebootx/Portal/AdminPost/add.html" afterPath="$PROJECT_DIR$/admin/themes/simplebootx/Portal/AdminPost/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/themes/simplebootx/Portal/AdminPost/edit.html" afterPath="$PROJECT_DIR$/admin/themes/simplebootx/Portal/AdminPost/edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/themes/simplebootx/Public/assets/css/admin_login.css" afterPath="$PROJECT_DIR$/admin/themes/simplebootx/Public/assets/css/admin_login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/Common/Common/function.php" afterPath="$PROJECT_DIR$/application/Common/Common/function.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/Portal/Common/function.php" afterPath="$PROJECT_DIR$/application/Portal/Common/function.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/Portal/Controller/AdminPostController.class.php" afterPath="$PROJECT_DIR$/application/Portal/Controller/AdminPostController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/Portal/Controller/ArticleController.class.php" afterPath="$PROJECT_DIR$/application/Portal/Controller/ArticleController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/conf/config.php" afterPath="$PROJECT_DIR$/data/conf/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/simplebootx/Comment/comment.html" afterPath="$PROJECT_DIR$/themes/simplebootx/Comment/comment.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/article.html" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/article.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/index.html" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/list.html" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/simplebootx/Public/css/style.css" afterPath="$PROJECT_DIR$/themes/simplebootx/Public/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/simplebootx/Public/footer.html" afterPath="$PROJECT_DIR$/themes/simplebootx/Public/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/simplebootx/Public/head.html" afterPath="$PROJECT_DIR$/themes/simplebootx/Public/head.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/simplebootx/Public/nav.html" afterPath="$PROJECT_DIR$/themes/simplebootx/Public/nav.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/simplebootx/Public/scripts.html" afterPath="$PROJECT_DIR$/themes/simplebootx/Public/scripts.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/simplebootx/config.html" afterPath="$PROJECT_DIR$/themes/simplebootx/config.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/simplebootx/error.html" afterPath="$PROJECT_DIR$/themes/simplebootx/error.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/simplebootx/jump.html" afterPath="$PROJECT_DIR$/themes/simplebootx/jump.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/simplebootx/success.html" afterPath="$PROJECT_DIR$/themes/simplebootx/success.html" />
     </list>
     <ignored path="sixth.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,7 +143,23 @@
     <favorites_list name="sixth" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="49" column="31" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#span#1;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#li#0;n#if#0;n#foreach#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#span#0;n#div#0;n#li#0;n#if#0;n#foreach#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#span#0;n#div#0;n#li#0;n#if#0;n#foreach#0;n#ul#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -63,9 +186,9 @@
         <option value="$PROJECT_DIR$/themes/simplebootx/Portal/article.html" />
         <option value="$USER_HOME$/Desktop/Web前端开发框架教程集锦 - 爱思资源网.html" />
         <option value="$PROJECT_DIR$/themes/simplebootx/Public/css/style.css" />
-        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/index.html" />
         <option value="$PROJECT_DIR$/admin/themes/simplebootx/Admin/boot/index.html" />
         <option value="$PROJECT_DIR$/themes/simplebootx/Public/footer.html" />
+        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/index.html" />
       </list>
     </option>
   </component>
@@ -110,8 +233,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -120,12 +243,76 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sixth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sixth" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sixth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sixth" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sixth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sixth" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simplebootx" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sixth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sixth" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simplebootx" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portal" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -190,17 +377,19 @@
       <workItem from="1470380236170" duration="2608000" />
       <workItem from="1470397389084" duration="2057000" />
       <workItem from="1470453476723" duration="6598000" />
+      <workItem from="1470622339329" duration="1354000" />
+      <workItem from="1475028038130" duration="10000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67222000" />
+    <option name="totallyTimeSpent" value="68586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17406876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1790831" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -322,13 +511,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/ThinkCMF/themes/simplebootx/Portal/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ThinkCMF/themes/simplebootx/Portal/index.html" />
     <entry file="file://$PROJECT_DIR$/application/Common/Common/extend.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -469,22 +652,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/Web前端开发框架教程集锦 - 爱思资源网.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="75" column="23" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Web前端开发框架教程集锦 - 爱思资源网.html" />
     <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/article.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="836">
           <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -492,7 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -500,23 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="603">
           <caret line="607" column="1" selection-start-line="607" selection-start-column="1" selection-end-line="607" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="177" column="17" selection-start-line="177" selection-start-column="17" selection-end-line="177" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#if#0;n#div#0;n#foreach#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#if#0;n#div#0;n#foreach#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#li#0;n#if#0;n#foreach#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#span#0;n#div#0;n#li#0;n#if#0;n#foreach#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#span#0;n#div#0;n#li#0;n#if#0;n#foreach#0;n#ul#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1470462486264" expanded="false" signature="10548:10561" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -524,7 +678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -532,7 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -540,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -548,7 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="156" column="27" selection-start-line="156" selection-start-column="27" selection-end-line="156" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -556,7 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -564,8 +713,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="49" column="31" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="31" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#foreach#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#li#0;n#if#0;n#foreach#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#span#0;n#div#0;n#li#0;n#if#0;n#foreach#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#span#0;n#div#0;n#li#0;n#if#0;n#foreach#0;n#ul#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

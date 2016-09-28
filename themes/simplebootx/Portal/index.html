@@ -54,13 +54,13 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 					<div class="caption-wraper">
 						<div class="caption">{$vo.slide_name}</div>
 					</div>
-					<a href="{$vo.slide_url}"><img src="{:sp_get_asset_upload_path($vo['slide_pic'])}" alt="" style="height: 278px;"></a>
+					<a href="{$vo.slide_url}"><img src="{:sp_get_asset_upload_path($vo['slide_pic'])}" alt=""></a>
 				</li>
 				</foreach>
 			</ul>
 		</div>
 		<div class="span5">
-			<h3 class="section-title">今日热点</h3>
+			<h3 class="section-title">热点聚焦</h3>
 			<div class="widget">
 				<div id="accordion2" class="accordion">
 					<php>
@@ -88,8 +88,8 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 	</div>
 	<div class="row">
 		<div class="span12 title">
-			<span class="titletext">热门推荐</span>
-			<!--<span class="subtitle" style="float: right;"><a href="#" target="_blank">MORE&gt;</a></span>-->
+			<span class="titletext">网页模板</span>
+			<span class="subtitle" style="float: right;"><a href="{:leuu('list/index',array('id'=>9))}" target="_blank">MORE&gt;</a></span>
 		</div>
 		<php>
 			$hot_recommend=sp_sql_posts("cid:$portal_hot_recommend;field:post_title,post_excerpt,tid,term_id,smeta;order:post_hits desc;limit:4;");
@@ -97,51 +97,18 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 		<foreach name="hot_recommend" item="vo">
 		<php>$smeta=json_decode($vo['smeta'],true);</php>
 		<div class="span3">
-			<if condition="empty($smeta['thumb'])">
-				<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" style="padding-bottom: 10px; height: 162px; width: 100%;">
-				<else />
-				<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" style="padding-bottom: 10px; height: 162px; width: 100%;">
-			</if>
-				<span><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title|msubstr=0,20,'utf-8',false}</a></span>
+			<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}" class="index_tmp">
+				<if condition="empty($smeta['thumb'])">
+					<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" style="margin-bottom: 15px; height: 162px; width: 100%;">
+					<else />
+					<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" style="margin-bottom: 15px; height: 162px; width: 100%;">
+				</if>
+			</a>
+			<span><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title|msubstr=0,20,'utf-8',false}</a></span>
 		</div>
 		</foreach>
 	</div>
 	<div class="row">
-		<div class="span4 list">
-			<div class="title">
-				<span class="titletext">前端技术</span>
-				<span class="subtitle" style="float: right;"><a href="{:leuu('list/index',array('id'=>4))}" target="_blank">MORE&gt;</a></span>
-			</div>
-			<ul>
-				<php>
-					$front_design=sp_sql_posts("cid:$portal_front_design;field:post_title,post_excerpt,tid,term_id,smeta;order:post_hits desc;limit:8;");
-				</php>
-				<foreach name="front_design" item="vo">
-					<php>$smeta=json_decode($vo['smeta'],true);</php>
-					<if condition="$key eq 0">
-						<li>
-							<div style="padding-bottom: 10px; list-style-type: none;">
-								<div style="float: left; padding-right: 10px;">
-									<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
-										<if condition="empty($smeta['thumb'])">
-											<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
-											<else />
-											<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
-										</if>
-									</a>
-								</div>
-								<span>
-									<span style="font-weight: bold; font-size: 16px;"><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title|msubstr=0,14,'utf-8',false}</a></span>
-									<p style="font-size: 12px; padding-top: 10px;">{$vo.post_excerpt|msubstr=0,33}</p>
-								</span>
-							</div>
-						</li>
-					<else />
-						<li><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title|msubstr=0,40,'utf-8',false}</a></li>
-					</if>
-				</foreach>
-			</ul>
-		</div>
 		<div class="span4 list">
 			<div class="title">
 				<span class="titletext">编程开发</span>
@@ -159,7 +126,7 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 								<div style="float: left; padding-right: 10px;">
 									<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
 										<if condition="empty($smeta['thumb'])">
-											<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
+											<img src="__TMPL__Public/images/article_default3.png" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
 											<else />
 											<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
 										</if>
@@ -172,14 +139,49 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 							</div>
 						</li>
 						<else />
-						<li><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title|msubstr=0,40,'utf-8',false}</a></li>
+						<li><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title|msubstr=0,26,'utf-8',false}</a></li>
 					</if>
 				</foreach>
 			</ul>
 		</div>
 		<div class="span4 list">
 			<div class="title">
-				<span class="titletext">程序员人生</span>
+				<span class="titletext">经典应用</span>
+				<span class="subtitle" style="float: right;"><a href="{:leuu('list/index',array('id'=>4))}" target="_blank">MORE&gt;</a></span>
+			</div>
+			<ul>
+				<php>
+					$front_design=sp_sql_posts("cid:$portal_front_design;field:post_title,post_excerpt,tid,term_id,smeta;order:post_hits desc;limit:8;");
+				</php>
+				<foreach name="front_design" item="vo">
+					<php>$smeta=json_decode($vo['smeta'],true);</php>
+					<if condition="$key eq 0">
+						<li>
+							<div style="padding-bottom: 10px; list-style-type: none;">
+								<div style="float: left; padding-right: 10px;">
+									<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
+										<if condition="empty($smeta['thumb'])">
+											<img src="__TMPL__Public/images/article_default4.png" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
+											<else />
+											<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
+										</if>
+									</a>
+								</div>
+								<span>
+									<span style="font-weight: bold; font-size: 16px;"><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title|msubstr=0,14,'utf-8',false}</a></span>
+									<p style="font-size: 12px; padding-top: 10px;">{$vo.post_excerpt|msubstr=0,33}</p>
+								</span>
+							</div>
+						</li>
+						<else />
+						<li><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title|msubstr=0,26,'utf-8',false}</a></li>
+					</if>
+				</foreach>
+			</ul>
+		</div>
+		<div class="span4 list">
+			<div class="title">
+				<span class="titletext">工作杂谈</span>
 				<span class="subtitle" style="float: right;"><a href="{:leuu('list/index',array('id'=>5))}" target="_blank">MORE&gt;</a></span>
 			</div>
 			<ul>
@@ -194,7 +196,7 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 								<div style="float: left; padding-right: 10px;">
 									<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
 										<if condition="empty($smeta['thumb'])">
-											<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
+											<img src="__TMPL__Public/images/article_default5.png" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
 											<else />
 											<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
 										</if>
@@ -207,7 +209,7 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 							</div>
 						</li>
 						<else />
-						<li><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title|msubstr=0,40,'utf-8',false}</a></li>
+						<li><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title|msubstr=0,26,'utf-8',false}</a></li>
 					</if>
 				</foreach>
 			</ul>
@@ -215,21 +217,22 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 	</div>
 	<div class="row">
 		<div class="span12 title">
-			<span class="titletext">开发工具</span>
+			<span class="titletext">实用工具</span>
 			<span class="subtitle" style="float: right;"><a href="{:leuu('list/index',array('id'=>7))}" target="_blank">MORE&gt;</a></span>
 		</div>
-		<div class="list web_tool">
+		<div class="tool list span12">
 			<ul>
 				<php>
-					$web_tool=sp_sql_posts("cid:$portal_web_tool;field:post_title,post_excerpt,tid,term_id,smeta;order:post_hits desc;limit:12;");
+					$web_tool=sp_sql_posts("cid:$portal_web_tool;field:post_title,post_excerpt,tid,post_download_url,term_id,smeta;order:post_hits desc;limit:16;");
 				</php>
 				<foreach name="web_tool" item="vo">
 					<php>$smeta=json_decode($vo['smeta'],true);</php>
-					<if condition="empty($smeta['thumb'])">
-						<li class="span3"><img src="__TMPL__Public/images/headicon.png" class="img-responsive" alt="{$vo.post_title}" style="height: 35px; width: 35px; padding-right: 5px;"><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title|msubstr=0,35,'utf-8',false}</a></li>
-						<else />
-						<li class="span3"><img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" style="height: 35px; width: 35px; padding-right: 5px;"><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title|msubstr=0,35,'utf-8',false}</a></li>
-					</if>
+					<li class="span1">
+						<a target="_blank" href="{$vo.post_download_url}">
+							<p><img src="{:sp_get_asset_upload_path($smeta['thumb'])}" width="35" height="35" alt="{$vo.post_title}"></p>
+							<p>{$vo.post_title|msubstr=0,10,'utf-8',false}</p>
+						</a>
+					</li>
 				</foreach>
 			</ul>
 		</div>
@@ -243,73 +246,73 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 		<section class="span12">
 			<ul id="da-thumbs" class="da-thumbs">
 				<li class="span2">
-					<a href="http://www.aseoe.com/go/?url=http://avalonjs.github.io/">
+					<a href="http://avalonjs.github.io/" target="_blank">
 						<img src="__TMPL__Public/images/demo/aseoe_avalon.jpg" />
 						<div><span>Avalon</span></div>
 					</a>
 				</li>
 				<li class="span2">
-					<a href="http://www.aseoe.com/go/?url=http://www.jqueryui.org.cn/">
+					<a href="http://www.jqueryui.org.cn/" target="_blank">
 						<img src="__TMPL__Public/images/demo/aseoe_jqueryui.jpg" />
 						<div><span>jQueryUI</span></div>
 					</a>
 				</li>
 				<li class="span2">
-					<a href="http://www.aseoe.com/go/?url=http://emberjs.com/">
+					<a href="http://emberjs.com/" target="_blank">
 						<img src="__TMPL__Public/images/demo/aseoe_ember.jpg" />
 						<div><span>Ember</span></div>
 					</a>
 				</li>
 				<li class="span2">
-					<a href="http://www.aseoe.com/go/?url=http://www.reactjs.cn/">
+					<a href="http://www.reactjs.cn/" target="_blank">
 						<img src="__TMPL__Public/images/demo/aseoe_react.jpg" />
 						<div><span>React</span></div>
 					</a>
 				</li>
 				<li class="span2">
-					<a href="http://www.aseoe.com/go/?url=http://www.commonjs.org/">
+					<a href="http://www.commonjs.org/" target="_blank">
 						<img src="__TMPL__Public/images/demo/aseoe_common.jpg" />
 						<div><span>CommonJS</span></div>
 					</a>
 				</li>
 				<li class="span2">
-					<a href="http://www.aseoe.com/special/webstart/backbone/">
+					<a href="http://www.aseoe.com/special/webstart/backbone/" target="_blank">
 						<img src="__TMPL__Public/images/demo/aseoe_backbone.jpg" />
 						<div><span>BackboneJS</span></div>
 					</a>
 				</li>
 				<li class="span2">
-					<a href="http://www.aseoe.com/go/?url=http://www.aizhengli.com/knockoutjs/">
+					<a href="http://www.aizhengli.com/knockoutjs/" target="_blank">
 						<img src="__TMPL__Public/images/demo/aseoe_knockout.jpg" />
 						<div><span>Knockoutjs</span></div>
 					</a>
 				</li>
 				<li class="span2">
-					<a href="http://www.aseoe.com/go/?url=http://cn.vuejs.org/guide/">
+					<a href="http://cn.vuejs.org/guide/" target="_blank">
 						<img src="__TMPL__Public/images/demo/aseoe_vue.jpg" />
 						<div><span>Vuejs</span></div>
 					</a>
 				</li>
 				<li class="span2">
-					<a href="http://www.aseoe.com/manual/less/">
+					<a href="http://www.aseoe.com/manual/less/" target="_blank">
 						<img src="__TMPL__Public/images/demo/aseoe_less.jpg" />
 						<div><span>LESS</span></div>
 					</a>
 				</li>
 				<li class="span2">
-					<a href="http://www.aseoe.com/manual/sass/">
+					<a href="http://www.aseoe.com/manual/sass/" target="_blank">
 						<img src="__TMPL__Public/images/demo/aseoe_sass.jpg" />
 						<div><span>SASS</span></div>
 					</a>
 				</li>
 				<li class="span2">
-					<a href="http://www.aseoe.com/manual/seajs/">
+					<a href="http://www.aseoe.com/manual/seajs/" target="_blank">
 						<img src="__TMPL__Public/images/demo/aseoe_seajs.jpg" />
 						<div><span>Seajs</span></div>
 					</a>
 				</li>
 				<li class="span2">
-					<a href="http://www.aseoe.com/go/?url=http://www.requirejs.cn/">
+					<a href="http://www.requirejs.cn/" target="_blank">
 						<img src="__TMPL__Public/images/demo/aseoe_requirejs.jpg" />
 						<div><span>Requirejs</span></div>
 					</a>
