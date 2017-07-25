@@ -116,7 +116,11 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 			</div>
 			<ul>
 				<php>
+<<<<<<< HEAD
 					$portal_program=sp_sql_posts("cid:$portal_program;field:post_title,post_excerpt,tid,term_id,smeta;order:tid desc;limit:8;");
+=======
+					$portal_program=sp_sql_posts("cid:$portal_program;field:post_title,post_excerpt,tid,term_id,smeta;order:post_hits desc;limit:8;");
+>>>>>>> 4f663b43e4c2684a5c2d69a0e301b399a90bd119
 				</php>
 				<foreach name="portal_program" item="vo">
 					<php>$smeta=json_decode($vo['smeta'],true);</php>
@@ -151,7 +155,11 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 			</div>
 			<ul>
 				<php>
+<<<<<<< HEAD
 					$front_design=sp_sql_posts("cid:$portal_front_design;field:post_title,post_excerpt,tid,term_id,smeta;order:tid desc;limit:8;");
+=======
+					$front_design=sp_sql_posts("cid:$portal_front_design;field:post_title,post_excerpt,tid,term_id,smeta;order:post_hits desc;limit:8;");
+>>>>>>> 4f663b43e4c2684a5c2d69a0e301b399a90bd119
 				</php>
 				<foreach name="front_design" item="vo">
 					<php>$smeta=json_decode($vo['smeta'],true);</php>

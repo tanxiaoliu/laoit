@@ -33,7 +33,7 @@ h1 a {
 	margin:auto;
 	overflow: hidden;
 	text-indent: -2000em;
-	background: url(../images/logo.png) no-repeat center center;
+	/*background: url(../images/logo.png) no-repeat center center;*/
 }
 
 .login ul,
