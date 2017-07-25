@@ -10,4 +10,6 @@
   'COMMENT_TIME_INTERVAL' => 60,
   'MOBILE_TPL_ENABLED' => 0,
   'HTML_CACHE_ON' => false,
+  'FILE_UPLOAD_TYPE' => 'Local',
+  'UPLOAD_TYPE_CONFIG' => NULL,
 );

@@ -12,8 +12,8 @@
 	
 	
     <div class="pg-opt pin">
-        <div class="container">
-            <h2>{$name}</h2>
+        <div class="container" style="padding-left: 10px;">
+            <h2 style="color: #FFF;">{$name}</h2>
         </div>
     </div>
     <div class="row">
@@ -32,13 +32,28 @@
 					<div style="float: left; padding-right: 10px;">
 						<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
 						<if condition="empty($smeta['thumb'])">
-							<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
+							<php>
+								$thumb=get_pic($vo['post_content']);
+							</php>
+							<if condition="empty($thumb)">
+								<img src="__TMPL__Public/images/article_default{$vo['term_id']}.png" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
+								<else />
+								<img src="{$thumb}" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
+							</if>
+							<!--<img src="{$thumb}" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">-->
 							<else />
 							<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive" alt="{$vo.post_title}" style="height: 76px; width: 120px;">
 						</if>
 						</a>
 					</div>
-					<p>{$vo.post_excerpt|msubstr=0,200}</p>
+					<if condition="empty($vo['post_excerpt'])">
+						<php>
+						$content = strip_tags($vo['post_content']);
+						</php>
+						<p>{$content|msubstr=0,140}</p>
+						<else />
+						<p>{$vo.post_excerpt|msubstr=0,140}</p>
+					</if>
 					<div>
 						<div class="pull-right">
 							<div class="list-actions">

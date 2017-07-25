@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{$name} {$seo_title} {$site_name}</title>
+	<meta name="keywords" content="{$seo_keywords}" />
+	<meta name="description" content="{$seo_description}">
+    <tc_include file="Public:head" />
+</head>
+<body>
+<tc_include file="Public:nav" />
+<div class="container tc-main">
+
+
+    <div class="pg-opt pin">
+        <div class="container" style="padding-left: 10px;">
+            <h2 style="color: #FFF;">{$name}</h2>
+        </div>
+    </div>
+    <div class="row">
+		<php>
+			$lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;",12);
+		</php>
+		<volist name="lists['posts']" id="vo">
+		<php>$smeta=json_decode($vo['smeta'],true);</php>
+		<div class="span4 col-sm-6 col-md-4">
+				<div class="product-template" itemscope="" itemtype="http://schema.org/Product">
+					<figure>
+						<if condition="empty($smeta['thumb'])">
+							<img class="img-responsive" src="__TMPL__Public/images/default_tupian1.png" data-src="__TMPL__Public/images/default_tupian1.png" alt="{$vo.post_title}" style="height: 229px; width: 350px;">
+							<else />
+							<img class="img-responsive" src="{:sp_get_asset_upload_path($smeta['thumb'])}" data-src="{:sp_get_asset_upload_path($smeta['thumb'])}" alt="{$vo.post_title}" style="height: 229px; width: 350px;">
+						</if>
+						<figcaption>
+							<div class="vertical-middle">
+								<div>
+									<div class="links">
+										<div>
+											<a class="btn btn-success btn-md" target="_blank" href="{$vo.post_demo_url}">预览</a></div>
+										<div>
+											<a class="link-item-details btn btn-primary btn-md" href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">源码下载</a></div>
+									</div>
+								</div>
+							</div>
+						</figcaption>
+					</figure>
+					<div class="item-header">
+						<h3 itemprop="name">
+							<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}" itemprop="url">{$vo.post_title|msubstr=0,20,'utf-8',false}</a></h3>
+                            <span class="item-category">
+							  <i class="fa fa-html5" data-toggle="tooltip" data-placement="top" title="" data-original-title="后台模板"></i>后台模板
+							</span>
+					</div>
+					<div class="product-meta clearfix purchase">
+						<span class="cart" >
+							<a href="{:U('article/do_like',array('id'=>$vo['object_id']))}" class="js-count-btn"><i class="fa fa-thumbs-up"></i><span class="count">{$vo.post_like}</span></a>
+							&nbsp;
+							<a href="{:U('user/favorite/do_favorite',array('id'=>$vo['object_id']))}" class="js-favorite-btn" data-title="{$vo.post_title}" data-url="{:U('portal/article/index',array('id'=>$vo['tid']))}" data-key="{:sp_get_favorite_key('posts',$vo['object_id'])}">
+								<i class="fa fa-star-o"></i>
+							</a>
+						</span>
+						<form class="purchase" action="#" method="get">
+							  <span class="product-price">
+								<span itemprop="price" content="16">已下载 {$vo.post_hits} 次</span>
+							  </span>
+						</form>
+					</div>
+				</div>
+			</div>
+		</volist>
+    </div>
+
+
+    <tc_include file="Public:footer" />
+</div>
+
+
+<!-- JavaScript -->
+<tc_include file="Public:scripts" />
+</body>
+</html>
